@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack{
+                Button("Notification"){
+                    UIApplication.shared.inAppNotification(adaptForDynamicIsland: true, timeout: 5, swipeToClose: true){
+                        RoundedRectangle(cornerRadius: 15, style: .continuous)
+                            .fill(.black)
+                    }
+                }
+            }.navigationTitle("App Notification")
         }
-        .padding()
     }
 }
 
