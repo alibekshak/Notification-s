@@ -13,38 +13,24 @@ struct ContentView: View {
             VStack{
                 Button("Notification"){
                     UIApplication.shared.inAppNotification(adaptForDynamicIsland: true, timeout: 5, swipeToClose: true){
-                        HStack{
+                        HStack(alignment: .center, spacing: 10){
                             Image("The_Mill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 34, height:34)
                                 .cornerRadius(15)
                             
-                            VStack(alignment: .leading, spacing: 4){
-                                Text("iAplle")
-                                    .font(.callout.bold())
-                                    .foregroundStyle(.white)
-                                
-                                Text("Hi, This is iApple")
-                                    .font(.caption)
-                                    .foregroundStyle(.gray)
-                            }
-                            
+                            Text("Hi, This is iApple")
+                                .font(.caption)
+                                .foregroundStyle(.white)
+
                             Spacer(minLength: 0)
                             
-                            Button(action: {}, label: {
-                                Image(systemName: "speaker.slash.fill")
-                                    .font(.title3)
-                            })
-                            .buttonStyle(.bordered)
-                            .buttonBorderShape(.capsule)
-                            .tint(.white)
                         }
-                        .padding(15)
-                        .background(
-                            RoundedRectangle(cornerRadius: 15)
-                                .fill(.black)
-                        )
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 16)
+                        .background(.black)
+                        .cornerRadius(16)
                     }
                 }
             }.navigationTitle("App Notification")

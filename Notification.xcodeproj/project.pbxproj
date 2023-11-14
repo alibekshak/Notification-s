@@ -53,8 +53,8 @@
 		1827A6332B02015C0016C2E4 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				1827A6422B0324660016C2E4 /* Helper */,
 				1827A6342B02015C0016C2E4 /* NotificationApp.swift */,
+				1827A6432B0324800016C2E4 /* InAppNotification.swift */,
 				1827A6362B02015C0016C2E4 /* ContentView.swift */,
 				1827A6382B02015E0016C2E4 /* Assets.xcassets */,
 				1827A63A2B02015E0016C2E4 /* Preview Content */,
@@ -68,14 +68,6 @@
 				1827A63B2B02015E0016C2E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1827A6422B0324660016C2E4 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				1827A6432B0324800016C2E4 /* InAppNotification.swift */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
