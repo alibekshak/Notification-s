@@ -13,8 +13,38 @@ struct ContentView: View {
             VStack{
                 Button("Notification"){
                     UIApplication.shared.inAppNotification(adaptForDynamicIsland: true, timeout: 5, swipeToClose: true){
-                        RoundedRectangle(cornerRadius: 15, style: .continuous)
-                            .fill(.black)
+                        HStack{
+                            Image("The_Mill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 50, height: 50)
+                                .cornerRadius(15)
+                            
+                            VStack(alignment: .leading, spacing: 4){
+                                Text("iAplle")
+                                    .font(.callout.bold())
+                                    .foregroundStyle(.white)
+                                
+                                Text("Hi, This is iApple")
+                                    .font(.caption)
+                                    .foregroundStyle(.gray)
+                            }
+                            
+                            Spacer(minLength: 0)
+                            
+                            Button(action: {}, label: {
+                                Image(systemName: "speaker.slash.fill")
+                                    .font(.title3)
+                            })
+                            .buttonStyle(.bordered)
+                            .buttonBorderShape(.capsule)
+                            .tint(.white)
+                        }
+                        .padding(15)
+                        .background(
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(.black)
+                        )
                     }
                 }
             }.navigationTitle("App Notification")
